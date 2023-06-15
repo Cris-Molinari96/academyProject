@@ -1,12 +1,9 @@
-public class Animal {
+public abstract class Animal implements NoiseMaker {
     private String name;
     private int age;
     private String paeseOrigine;
     private String verso;
 
-    public Animal(String verso){
-        this.verso = verso;
-    }
 
     public String getName() {
         return name;
@@ -39,10 +36,4 @@ public class Animal {
     public void setVerso(String verso) {
         this.verso = verso;
     }
-
-    public String suonoAnimale(){
-        return verso;
-    }
-
-
 }
