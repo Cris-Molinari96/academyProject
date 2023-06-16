@@ -8,14 +8,12 @@ public class JDBCConnector {
     Connection connection = null;
     Statement statement = null;
 
-    ResultSet resultSet = null;
-    public void getConnectionGiuseppe(){
-        try {
+    /*public void getConnectionGiuseppe(){
 
+        try {
             // check Classe Driver vista nel prog.
             Class.forName("com.mysql.cj.jdbc.Driver"); // si può fare un check sulla cartella Driver per vedere se è implementata e vista
             System.out.println("Class founded");
-
             // Verifica connection
             try {
                 connection = DriverManager.getConnection(url, user, pass); // --> restituisce un oggetto di tipo connection
@@ -24,14 +22,12 @@ public class JDBCConnector {
                 System.out.println("Error connection");
                 throw new RuntimeException(e);
             }
-
             // Statement check
             try {
                 statement = connection.createStatement();
             } catch (SQLException s){
                 System.out.println("Statement error");
             }
-
             // Result set check
             try{
                 ResultSet resultSet = statement.executeQuery("select * from actor");
@@ -44,11 +40,10 @@ public class JDBCConnector {
                 System.out.println("Errore di stampa");
                 throw new RuntimeException(e);
             }
-
         }catch(ClassNotFoundException c){
             System.out.println("Class not found, error!!");
         }
-    }
+    }*/
 
     public static Connection getConnection(){
         try {
